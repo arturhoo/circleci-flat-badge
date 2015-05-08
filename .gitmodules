@@ -1,0 +1,3 @@
+[submodule "provisioning/cameos"]
+	path = provisioning/cameos
+	url = https://github.com/idxp/cameos.git

@@ -1,0 +1,20 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+  vars:
+    deploy_user: vagrant
+    rubies:
+      - 2.2.2
+    global_ruby: 2.2.2
+  pre_tasks:
+    - name: update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+  roles:
+    - cameos/roles/base
+    - cameos/roles/supervisor
+    - cameos/roles/ruby
+    - cameos/roles/nginx
+    - setup

@@ -29,3 +29,11 @@ And go to
 [`http://localhost:4567/gh/circleci/circle.svg?token=3cc80b12ab3627373c76e13735b8bc00a1259b9e`](http://localhost:4567/gh/circleci/circle.svg?token=3cc80b12ab3627373c76e13735b8bc00a1259b9e)
 
 That's it!
+
+## Deployment
+
+You can deploy it locally using Vagrant
+
+`vagrant up`
+
+Or using the Ansible playbook inside the `provisioning` folder

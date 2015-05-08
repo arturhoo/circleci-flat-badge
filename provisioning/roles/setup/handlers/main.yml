@@ -1,0 +1,13 @@
+---
+- name: add circleci
+  supervisorctl:
+    name: circleci
+    state: present
+- name: start circleci
+  supervisorctl:
+    name: circleci
+    state: started
+- name: restart circleci
+  supervisorctl:
+    name: circleci
+    state: restarted

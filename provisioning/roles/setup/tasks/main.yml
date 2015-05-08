@@ -1,0 +1,31 @@
+---
+- name: clone the project
+  become: yes
+  become_user: "{{ deploy_user }}"
+  git:
+    repo: https://github.com/arturhoo/circleci-flat-badge
+    dest: "/home/{{ deploy_user }}/circleci-flat-badge"
+- name: bundle install
+  become: yes
+  become_user: "{{ deploy_user }}"
+  shell: ~/.rbenv/shims/bundle
+  args:
+    chdir: "/home/{{ deploy_user }}/circleci-flat-badge"
+- name: copy supervisord file
+  template:
+    src: circleci.conf.j2
+    dest: /etc/supervisord.d/circleci.conf
+  notify:
+    - add circleci
+    - start circleci
+- name: copy nginx vhost
+  copy:
+    src: circleci.vhost
+    dest: /etc/nginx/sites-available/circleci.vhost
+- name: symlink nginx vhost
+  file:
+    state: link
+    src: /etc/nginx/sites-available/circleci.vhost
+    path: /etc/nginx/sites-enabled/circleci.vhost
+  notify:
+    - restart nginx

@@ -1,0 +1,5 @@
+[program:circleci]
+directory=/home/{{ deploy_user }}/circleci-flat-badge
+command=/home/{{ deploy_user }}/.rbenv/shims/ruby app.rb
+user={{ deploy_user }}
+autostart=true
