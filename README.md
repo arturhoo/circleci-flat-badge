@@ -2,13 +2,13 @@
 
 Are you annoyed by the fact that Circle doesn't follow convetions when it comes to badge styling:
 
-![Circle](https://circleci.com/gh/circleci/circle.png?circle-token=3cc80b12ab3627373c76e13735b8bc00a1259b9e)
+![Circle](http://artur.s3.amazonaws.com/circle-png.png)
 
-![Circle](https://circleci.com/gh/circleci/circle.svg?style=svg&circle-token=3cc80b12ab3627373c76e13735b8bc00a1259b9e)
+![Circle](http://artur.s3.amazonaws.com/circle-svg.svg)
 
 The best they can do is provide an old-fashioned plastic style:
 
-![Circle](https://circleci.com/gh/circleci/circle.svg?style=shield&circle-token=3cc80b12ab3627373c76e13735b8bc00a1259b9e)
+![Circle](http://artur.s3.amazonaws.com/circle-shield.svg)
 
 We want it flat!!
 
